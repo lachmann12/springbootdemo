@@ -33,7 +33,7 @@ Then hit enter and the project will be built into the current folder. All JAVA c
 
 Browse to **demo/src/main/resources**, here you can modify properties such as server ports. In this example we change the server port for the local deployment to **8088** from the default **8080**
 
-## Initially disable the JPA dependency until a database is setup
+## Initially disable the JPA dependency until a database is set up
 
 Open the pom.xml file and comment out the lines below (Ctrl + /)
 
