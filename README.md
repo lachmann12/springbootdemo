@@ -48,7 +48,7 @@ Save changes.
 
 ## Start server
 
-Go to **demo/src/main/java/cloud/maayanlab/demo** and open DemoApplication.java. If you look closely you will see a Run | Debug link on top of public static void main(String[] args). 
+Go to **demo/src/main/java/cloud/maayanlab/demo** and open DemoApplication.java. If you look closely you will see a **Run | Debug** link on top of public static void main(String[] args). 
 
 -- Select Run
 
