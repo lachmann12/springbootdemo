@@ -50,7 +50,7 @@ Save changes.
 
 Go to **demo/src/main/java/cloud/maayanlab/demo** and open DemoApplication.java. If you look closely you will see a **Run | Debug** link on top of public static void main(String[] args). 
 
--- Select Run
+-- Select **Run**
 
 This will launch a Tomcat server which will now host the application at **localhost:8088**. Because we added Spring Boot DevTools as a dependency everytime we change code the server will be restarted automatically, which is very convenient.
 
