@@ -1,6 +1,6 @@
 cd ..
 chmod 777 mvnw
-mvnw clean install
+./mvnw clean install
 cd docker
 
 cp ../target/demo-0.0.1-SNAPSHOT.war demo.war
