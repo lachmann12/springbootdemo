@@ -59,9 +59,17 @@ This should conclude the initialization and setup.
 # Packaging war file
 
 To package a **war** or **jar** file use the terminal and go into the **demo** folder. Then run:
+
+Linux/MAC
+```
+mvnw clean install
+```
+
+Windows
 ```
 mvnw.cmd clean install
 ```
+
 This will create a file called **demo-0.0.1-SNAPSHOT.war** in the **target** folder.
 
 # Developing an API
