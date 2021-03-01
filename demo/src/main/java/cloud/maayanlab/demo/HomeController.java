@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @CrossOrigin
 public class HomeController {
     
-    @GetMapping(value="/")
+    @GetMapping(value="/demo")
     public List<String> home() {
         return List.of("Hello","from Spring Boot");
     }
