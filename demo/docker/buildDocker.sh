@@ -1,5 +1,5 @@
 cd ..
-chmod 777 ../mvnw
+chmod 777 mvnw
 mvnw clean install
 cd docker
 
