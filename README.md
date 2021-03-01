@@ -12,7 +12,7 @@ This is a detailed tutorial how to develop a full fledged Java API with database
 5. Specify project language: Java
 6. Input group name: Should be reverse URL (e.g. **cloud.maayanlab**)
 7. Input Artifact ID: This will be the project name (e.g. here we call it **demo**)
-8. Specify packaging type (I chose WAR here for later dockerization)
+8. Specify packaging type (I chose **JAR** here for later dockerization)
 9. Select one of the installed JAVA versions (I selected 1.8)
 
 ### Select Dependencies
@@ -56,7 +56,7 @@ This will launch a Tomcat server which will now host the application at **localh
 
 This should conclude the initialization and setup.
 
-# Packaging war file
+# Packaging jar file
 
 To package a **war** or **jar** file use the terminal and go into the **demo** folder. Then run:
 
@@ -70,7 +70,25 @@ Windows
 mvnw.cmd clean install
 ```
 
-This will create a file called **demo-0.0.1-SNAPSHOT.war** in the **target** folder.
+This will create a file called **demo-0.0.1-SNAPSHOT.war/jar** in the **target** folder.
+
+# Dockerization
+
+To deploy the applicaton we want to encapsulate it in a Docker container. The folder **demo/docker** contains all that is needed to generate a Docker image.
+
+1) go into **demo/docker** folder
+2) chmod 777 buildDocker.sh (UNIX)
+3) ./buildDocker.sh
+
+This will start the packaging procedure and create a jar file. It will package the resulting jar file into a docker image. Edit the **buildDocker.sh** file to name the image. The **DockerFile** contains a line that modifies the environment variables. Here more memory can be reserved. Once the docker image is build it can be run locally with:
+
+```
+docker run --name demo -p 8099:8088 -it lachmann12/springbootdemo
+```
+
+The deployment can be tested at http://localhost:8099
+
+
 
 # Developing an API
 
